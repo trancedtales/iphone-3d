@@ -1,6 +1,6 @@
-import 'navbar' from './components/navbar';
-import 'highlights' from './components/highlights';
-import 'hero' from './components/hero';
+import Navbar from './components/navbar';
+import Highlights from './components/highlights';
+import Hero from './components/hero';
 
 
 const App = ()=> {
@@ -9,8 +9,8 @@ const App = ()=> {
     <>
       <main className="bg-black">
           <Navbar /> 
-          <Hero-section />
-          < Highlights />
+          <Hero />
+          <Highlights />
 
 
         </main>
