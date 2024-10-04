@@ -11,8 +11,6 @@ const App = ()=> {
           <Navbar /> 
           <Hero />
           <Highlights />
-
-
         </main>
     </>
   )
