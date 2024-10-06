@@ -15,10 +15,20 @@ const videocarousel = () => {
         isLastVideo: false, 
         isPlaying: false, 
     })
- 
-const { isEnd, isLastVideo, startPlay, videoId, isPlaying} = video; 
 
 const [loadedData,setLoadedData] = useState ([]);
+
+const { isEnd, isLastVideo, startPlay, videoId, isPlaying} = video; 
+
+useEffect(()=>{
+    if(loadedData.length >3) {
+        if(!isPlaying){
+            videoRef.current[videoId].pause();
+        } else{
+            startPlay && videoDivRef,current[videoId].play();
+        }
+    }
+},[startPlay,videoId,isPlaying,loadedData])
 
 
 
@@ -53,6 +63,12 @@ useEffect (()=> {
                                 playsInline = {true}
                                 preload='auto'
                                 muted
+                                ref={(el) => (videoRef,current[i] = el )}
+                                onPlay={()=>{
+                                   setVideo ((prevVideo) =>{
+                                   prevVideo , isPlaying: true;
+                                   })
+                                }};
                                 >
                                     <source src={list.video} type = 'video/mp4' />
                                 </video>
