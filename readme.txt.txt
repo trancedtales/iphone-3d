@@ -1,1 +1,2 @@
-slow nad dteady eins the race - 6/10
+slow and steady wins the race- 6/10
+too slow - 13/11
